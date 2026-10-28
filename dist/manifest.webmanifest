@@ -1,0 +1,11 @@
+{
+  "name": "Azharica International Islamic College",
+  "short_name": "Azharica",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#001606",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}
