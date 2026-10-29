@@ -31,7 +31,7 @@ const destinations = [
   { terms: ['kurikulum', 'dual', 'pathway', 'al-azhar', 'insan cendekia'], id: 'program', label: 'Membuka bagian Dual Pathway…' },
   { terms: ['sqils', 'steam', 'coding', 'robotika', 'sains'], id: 'sqils', label: 'Membuka bagian SQILS…' },
   { terms: ['asrama', 'pesantren', 'santri', 'cinta', 'kehidupan'], id: 'kehidupan', label: 'Membuka kehidupan santri…' },
-  { terms: ['ppdb', 'daftar', 'penerimaan', 'admisi', 'kunjungan'], id: 'ppdb', label: 'Membuka informasi PPDB…' },
+  { terms: ['ppdb', 'daftar', 'penerimaan', 'admisi', 'kunjungan'], href: 'ppdb.html', label: 'Membuka halaman PPDB…' },
   { terms: ['tentang', 'azharica', 'sekolah'], id: 'tentang', label: 'Membuka tentang Azharica…' }
 ];
 
@@ -46,6 +46,10 @@ const runSearch = () => {
   setTimeout(() => {
     searchPanel.hidden = true;
     searchToggle.setAttribute('aria-expanded', 'false');
+    if (destination.href) {
+      window.location.href = destination.href;
+      return;
+    }
     document.getElementById(destination.id).scrollIntoView({ behavior: 'smooth' });
   }, 250);
 };
