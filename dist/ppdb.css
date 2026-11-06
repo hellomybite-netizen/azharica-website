@@ -53,6 +53,7 @@
 .form-footnote{font-size:10px;color:rgba(0,22,6,.58);margin:0;max-width:560px}
 .ppdb-options{background:var(--sand)}
 .option-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:75px}
+.option-grid.four-options{grid-template-columns:repeat(4,1fr)}
 .option-grid article{min-height:360px;background:#fff;padding:34px;display:flex;flex-direction:column;border-top:5px solid var(--lime)}
 .option-grid h3{font:700 clamp(24px,2.3vw,34px)/1.12 var(--sans);margin:auto 0 16px}
 .option-grid p{font-size:13px;color:rgba(0,22,6,.67);margin:0 0 30px}
@@ -83,13 +84,14 @@
   .ppdb-section-head,.ppdb-section-head.compact{grid-template-columns:1fr;gap:25px}
   .ppdb-form-section,.ppdb-contact,.ppdb-faq{grid-template-columns:1fr}
   .ppdb-form-intro{min-height:560px}.contact-card{min-height:470px}
+  .option-grid.four-options{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:720px){
   .ppdb-announcement span:last-child{display:none}.ppdb-header .button{min-height:42px;padding:10px 13px;font-size:9px}
   .ppdb-hero{height:auto;min-height:760px}.ppdb-hero-image{object-position:62% center}.ppdb-hero-wash{background:linear-gradient(90deg,rgba(0,22,6,.92),rgba(0,22,6,.44)),linear-gradient(0deg,rgba(0,22,6,.88),transparent 70%)}
   .ppdb-hero-content{top:auto;bottom:120px;transform:none;right:var(--pad)}.ppdb-hero h1{font-size:55px}.ppdb-hero-content>p:not(.eyebrow){font-size:13px}
   .ppdb-hero-actions{align-items:flex-start;flex-direction:column;gap:18px}.ppdb-hero-note{left:var(--pad);right:var(--pad);bottom:26px;width:auto}
-  .ppdb-section-head h2{font-size:43px}.ppdb-flow,.option-grid{grid-template-columns:1fr;margin-top:50px}.ppdb-flow article{min-height:230px}
+  .ppdb-section-head h2{font-size:43px}.ppdb-flow,.option-grid,.option-grid.four-options{grid-template-columns:1fr;margin-top:50px}.ppdb-flow article{min-height:230px}
   .ppdb-form-intro{min-height:500px}.field-row{grid-template-columns:1fr}.ppdb-form{padding-top:68px;padding-bottom:68px}.form-submit{align-self:stretch}
   .option-grid article{min-height:310px}.contact-card{min-height:430px;padding-left:var(--pad);padding-right:var(--pad)}
   .ppdb-faq{gap:52px}.ppdb-footer-action{margin-top:10px}

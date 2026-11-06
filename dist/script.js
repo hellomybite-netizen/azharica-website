@@ -28,7 +28,8 @@ qsa('#mobile-menu a').forEach(link => link.addEventListener('click', () => {
 }));
 
 const destinations = [
-  { terms: ['kurikulum', 'dual', 'pathway', 'al-azhar', 'insan cendekia'], id: 'program', label: 'Membuka bagian Dual Pathway…' },
+  { terms: ['kurikulum', 'dual', 'pathway', 'insan cendekia'], id: 'program', label: 'Membuka bagian Dual Pathway…' },
+  { terms: ['al-azhar', 'cairo', 'mesir', 'penyetaraan', 'ijazah'], id: 'cairo', label: 'Membuka jalur Al-Azhar Cairo…' },
   { terms: ['sqils', 'steam', 'coding', 'robotika', 'sains'], id: 'sqils', label: 'Membuka bagian SQILS…' },
   { terms: ['asrama', 'pesantren', 'santri', 'cinta', 'kehidupan'], id: 'kehidupan', label: 'Membuka kehidupan santri…' },
   { terms: ['ppdb', 'daftar', 'penerimaan', 'admisi', 'kunjungan'], href: 'ppdb.html', label: 'Membuka halaman PPDB…' },
@@ -41,7 +42,7 @@ const runSearch = () => {
   const term = input.value.trim().toLowerCase();
   if (!term) { feedback.textContent = 'Ketik topik yang ingin dicari.'; return; }
   const destination = destinations.find(item => item.terms.some(keyword => term.includes(keyword) || keyword.includes(term)));
-  if (!destination) { feedback.textContent = 'Coba kata: kurikulum, SQILS, asrama, atau PPDB.'; return; }
+  if (!destination) { feedback.textContent = 'Coba kata: kurikulum, Al-Azhar Cairo, SQILS, asrama, atau PPDB.'; return; }
   feedback.textContent = destination.label;
   setTimeout(() => {
     searchPanel.hidden = true;
